@@ -1,6 +1,6 @@
 ---
 name: web-search
-description: Web検索時のルールを定める。
+description: Web検索時のルールや出力方法を定めるスキル
 ---
 
 # 🛠️ Skill Details
