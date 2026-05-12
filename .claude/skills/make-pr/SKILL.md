@@ -1,5 +1,5 @@
 ---
-name: pull-request
+name: make-pr
 description: pull requestのルールを定め、プロジェクトのコードベースに対する変更を明確かつ一貫性のある方法で記録することを目的としたスキル
 ---
 
