@@ -1,0 +1,143 @@
+# ========================
+# Claude Code
+# ========================
+.claude/settings.local.json
+
+# ========================
+# 環境変数・シークレット
+# ========================
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# ========================
+# OS
+# ========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ========================
+# エディタ・IDE
+# ========================
+# VS Code（ユーザー固有設定のみ除外。共有設定は .vscode/ ごとコミット可）
+.vscode/*.log
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim / Neovim
+*.swp
+*.swo
+Session.vim
+
+# Emacs
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+
+# ========================
+# 言語・ランタイム
+# ========================
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnp/
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Ruby
+.bundle/
+vendor/bundle/
+*.gem
+
+# Go
+vendor/
+
+# Rust
+target/
+
+# Java / Kotlin
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# ========================
+# ビルド成果物
+# ========================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.turbo/
+coverage/
+*.lcov
+.nyc_output/
+
+# ========================
+# ログ・一時ファイル
+# ========================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
