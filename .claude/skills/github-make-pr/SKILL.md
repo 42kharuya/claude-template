@@ -1,6 +1,6 @@
 ---
-name: make-pr
-description: pull requestのルールを定め、プロジェクトのコードベースに対する変更を明確かつ一貫性のある方法で記録することを目的としたスキル
+name: github-make-pr
+description: pull requestのルールと作成方法を定めるスキル
 ---
 
 # 🛠️ Skill Details
@@ -18,3 +18,18 @@ description: pull requestのルールを定め、プロジェクトのコード�
   - 完了したタスクであれば `Closes #<number>` または `Fixes #<number>` を含めてください。
   - 関連の参照であれば `Refs #<number>` を使用してください。
 - **要約の生成**: PRのタイトルや本文を生成する際は、個々のコミット履歴を要約し、レビュアーが変更内容を把握しやすいように構成してください。
+
+## プルリクエストの作成手順
+- 変更内容をマージするために `/tmp` 配下にmdファイルを作成し、前述した「プルリクエストのルール」に従ってPR（タイトル・本文）を出力します。
+  - ※ファイル内でコードブロックを使用する場合は必ず ``` で囲んで閉じてください。
+- mdファイル作成後、以下のように `gh` コマンドを使ってPRを作成します。
+  ```bash
+  gh pr create \
+    --title "<type>(<scope>): <description>" \
+    --body-file /tmp/<ファイル名>.md \
+    --base main \
+    --head <ブランチ名>
+  ```
+  - `--title` は「プルリクエストのルール」に従い `<type>(<scope>): <description>` の形式にします。
+  - PR作成後、表示されたURLをユーザーに共有します。
+  - 作成した一時ファイル（`/tmp/<ファイル名>.md`）を必ず削除してください。

@@ -1,6 +1,6 @@
 ---
-name: create-issue
-description: 入力されたファイル・テキストをもとに、GitHub Issueを自律的に作成します。
+name: github-create-issue
+description: 入力されたファイル・テキストをもとに、GitHub Issueを自律的に作成するスキル
 ---
 
 # 🎯 Objective [目的]
@@ -14,7 +14,7 @@ description: 入力されたファイル・テキストをもとに、GitHub Iss
 - 「わかりました」「承知しました」などの不要な前置き（雑談）を省略し、結論から回答してください。
 
 ## Issue作成のルール
-- **フォーマット**: `.claude/create-issue/ISSUE_TEMPLATE/` 配下のテンプレートから、入力内容に最も適したものを読み込み、それに従ってIssueの本文を生成してください。フロントマター（`---`で囲まれた部分）は本文から除外して利用してください。　
+- **フォーマット**: `.claude/skills/create-issue/ISSUE_TEMPLATE/` 配下のテンプレートから、入力内容に最も適したものを読み込み、それに従ってIssueの本文を生成してください。フロントマター（`---`で囲まれた部分）は本文から除外して利用してください。　
 - **テンプレートに当てはまらない内容**: 入力内容が既存のテンプレートに完全には当てはまらない場合は、新規テンプレート・ラベル作成を提案してください。
 - **非対話でのIssue作成**: コマンドの対話プロンプトや文字エスケープに関するエラーを回避するため、必ず `/tmp/` 配下に一時ファイルを作成し、`--body-file` オプションを経由してIssueを作成してください。
   - 例: `/tmp/temp_issue.md` に本文を書き込んだ後、`gh issue create --title "エラーの修正" --body-file /tmp/temp_issue.md --label "bug, triage"` を実行。
